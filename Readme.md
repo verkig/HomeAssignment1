@@ -9,9 +9,13 @@ Example:
 Input: Following is a series of valid inputs for the program:
 
 i = 0
+
 j = ++i
+
 x = i++ + 5
+
 y = 5 + 3 * 10
+
 i += y
 
 2.The MyClass has several memory and runtime inefficiencies and bugs. Locate and fix as
