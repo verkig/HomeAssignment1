@@ -1,3 +1,5 @@
+#HomeAssignment1
+
 1. Objective: Implement a text based calculator application. Usage of Rhino, Nashorn and other
 similar solutions is not allowed.
 Input: The input is a series of assignment expressions. The syntax is a subset of Java numeric
@@ -5,6 +7,7 @@ expressions and operators.
 Output: At the end of evaluating the series, the value of each variable is printed out.
 Example:
 Input: Following is a series of valid inputs for the program:
+
 i = 0
 j = ++i
 x = i++ + 5
