@@ -18,6 +18,11 @@ public class MyClass{
 		m_strings = strings;
 	}
 	
+	/**
+	 * equals should check null, use getClass instead of instance of
+	 * also need to implement hashCode along with equals on same attributes
+	 * so that the objects can be used in maps or sets
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -44,6 +49,10 @@ public class MyClass{
 	}
 	
 
+	/**
+	 * toString that appends alot of strings should use StringBuffer in order to 
+	 * avoid creation on many String objects in the process
+	 */
 	@Override
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
@@ -58,6 +67,10 @@ public class MyClass{
 		return sb.toString();
 	}
 	
+	/**
+	 * can't remove during iteration over a List, need to use stream or iterator
+	 * @param str
+	 */
 	public void removeString(String str) {
 		if (str == null) {
 			return;
@@ -68,6 +81,12 @@ public class MyClass{
 						.collect(Collectors.toList());
 	}
 	
+	/**
+	 * cleaner however need to consider if HashSet better be used here
+	 * as it will improve the performance
+	 * @param number
+	 * @return
+	 */
 	public boolean containsNumber(long number) {
 		if (m_numbers == null) {
 			return false;
@@ -76,6 +95,10 @@ public class MyClass{
 		return m_numbers.contains(number);
 	}
 	
+	/**
+	 * java 8 offers a simpler API which is also immutable and thus thread-safe
+	 * @return
+	 */
 	public boolean isHistoric() {
 		if (m_time == null) {
 			return false;
